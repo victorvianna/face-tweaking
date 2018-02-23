@@ -6,8 +6,10 @@ add_subdirectory(/usr/lib/dlib-19.9/dlib dlib)
 set(CMAKE_CXX_STANDARD 11)
 
 
-add_executable(eye_detection main.cpp)
+#add_executable(eye_detection main.cpp)
 #add_executable(eye_detection face_landmark_detection_ex.cpp)
+#add_executable(eye_detection haarOpenCV.cpp)
+add_executable(eye_detection FaceMorph/faceMorph.cpp)
 
 
 target_link_libraries(eye_detection ${OpenCV_LIBS})

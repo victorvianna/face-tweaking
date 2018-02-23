@@ -9,10 +9,10 @@ using namespace cv;
 using namespace std;
 
 
-#define LEFT_EYE_BEGIN 37 // leftmost eye on the image
-#define LEFT_EYE_END 42
-#define RIGHT_EYE_BEGIN 43 //rightmost eye on the image
-#define RIGHT_EYE_END 48
+#define LEFT_EYE_BEGIN 36 // leftmost eye on the image
+#define LEFT_EYE_END 41
+#define RIGHT_EYE_BEGIN 42 //rightmost eye on the image
+#define RIGHT_EYE_END 47
 
 // Read points stored in the text files
 vector<Point2f> readPoints(string pointsFileName)
@@ -126,7 +126,7 @@ int main( int argc, char** argv)
 
 
     //Read triangle indices
-    ifstream ifs("tri.txt");
+    ifstream ifs("../tri.txt");
     int x,y,z;
 
     while(ifs >> x >> y >> z)
