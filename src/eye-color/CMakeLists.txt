@@ -10,6 +10,7 @@ set(CMAKE_CXX_STANDARD 11)
 #add_executable(eye_detection face_landmark_detection_ex.cpp)
 #add_executable(eye_detection haarOpenCV.cpp)
 add_executable(eye_detection FaceMorph/faceMorph.cpp)
+#add_executable(eye_detection FaceSwap/faceSwap.cpp)
 
 
 target_link_libraries(eye_detection ${OpenCV_LIBS})

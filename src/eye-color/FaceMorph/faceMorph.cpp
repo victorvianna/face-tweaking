@@ -17,9 +17,14 @@ using namespace std;
 
 typedef vector<int> Triangle;
 
-#define LEFT_EYE_BEGIN 36 // leftmost eye on the image
+/*namespace  constants {
+
+}
+constants::asas
+*/
+#define LEFT_EYE_BEGIN 36 // index of leftmost eye on the image
 #define LEFT_EYE_END 41
-#define RIGHT_EYE_BEGIN 42 //rightmost eye on the image
+#define RIGHT_EYE_BEGIN 42 // index of rightmost eye on the image
 #define RIGHT_EYE_END 47
 #define DATA_FILENAME "../shape_predictor_68_face_landmarks.dat"
 #define TRIANGLE_FILENAME "../tri.txt"
@@ -57,12 +62,13 @@ void calculateLandmarks(string filename, vector<Point2f> & output)
     dlib::array2d<dlib::rgb_pixel> img;
     dlib::load_image(img, filename);
     // Make the image larger so we can detect small faces.
-    dlib::pyramid_up(img);
+
+    //dlib::pyramid_up(img); // if we enlarge the image we have problems
 
     // Now tell the face detector to give us a list of bounding boxes
     // around all the faces in the image.
     vector<dlib::rectangle> dets = detector(img);
-    cout << "Number of faces detected: " << dets.size() << endl;
+    //cout << "Number of faces detected: " << dets.size() << endl;
 
     assert(dets.size()==1);  /// WE HAVE TO TREAT LATER THE CASE WHERE THERE ARE MULTIPLE FACES
 
@@ -71,15 +77,8 @@ void calculateLandmarks(string filename, vector<Point2f> & output)
     //std::vector<full_object_detection> shapes;
     for (unsigned long j = 0; j < dets.size(); ++j) {
         dlib::full_object_detection shape = sp(img, dets[j]);
-        cout << "number of parts: " << shape.num_parts() << endl;
-        cout << "pixel position of first part:  " << shape.part(0) << endl;
-        cout << "pixel position of second part: " << shape.part(1) << endl;
 
-        for (int i = LEFT_EYE_BEGIN; i <= LEFT_EYE_END; i++) {
-            output.push_back(Point2f((float) shape.part(i).x(), (float) shape.part(i).y()));
-        }
-
-        for (int i = LEFT_EYE_BEGIN; i <= LEFT_EYE_END; i++) {
+        for (int i = 0; i < shape.num_parts(); i++) {
             output.push_back(Point2f((float) shape.part(i).x(), (float) shape.part(i).y()));
         }
 
@@ -168,8 +167,67 @@ void calculateTriangles(vector<Triangle> & triangles)
 
 
     // otherwise
+
+
+    /*
+    if we want to increase the number of points or add the center of the pupil 
+    (seems a godd idea), we need to implement the triangularization
+    */
+
     throw("Triangle file not found");
 }
+/*
+void clearEyes(Mat & img, vector<Point2f> points, vector<Triangle> triangles)
+{
+
+    cv::Mat lineMask = cv::Mat::zeros(img.size(), img.type());
+
+    for(int i=0; i<triangles.size(); i++)
+    {
+        int a = triangles[i][0], b = triangles[i][1], c = triangles[i][2];
+
+        float xA = points[a].x, yA = points[a].y,
+                xB = points[b].x, yB = points[b].y,
+                xC = points[c].x, yC = points[c].y;
+
+        cv::line(lineMask, cv::Point(xA, yA), cv::Point(xB, yB), cv::Scalar(255, 255, 0), 1, 8, 0);
+        cv::line(lineMask, cv::Point(xA, yA), cv::Point(xC, yC), cv::Scalar(255, 255, 0), 1, 8, 0);
+        cv::line(lineMask, cv::Point(xB, yB), cv::Point(xC, yC), cv::Scalar(255, 255, 0), 1, 8, 0);
+    }
+// perform contour detection on your line mask
+    vector< vector< Point>> contours;
+    vector< Vec4i> hierarchy;
+    findContours(lineMask, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0));
+
+// calculate the distance to the contour
+    cv::Mat raw_dist(lineMask.size(), CV_32FC1);
+
+    for (int i = 0; i < lineMask.rows; i++)
+    {
+        for (int j = 0; j < lineMask.cols; j++)
+        {
+            raw_dist.at<float>(i, j) = cv::pointPolygonTest(contours[0], cv::Point2f(j, i), true);
+        }
+    }
+
+    double minVal; double maxVal;
+    cv::minMaxLoc(raw_dist, &minVal, &maxVal, 0, 0, cv::Mat());
+    minVal = std::abs(minVal);
+    maxVal = std::abs(maxVal);
+
+    for (int i = 0; i < img.rows; i++)
+    {
+        for (int j = 0; j < img.cols; j++)
+        {
+            if (raw_dist.at<float>(i, j) < 0)
+               img.at<uchar>(i, j) = static_cast<uchar>(0);
+
+
+        }
+    }
+
+}
+*/
 
 
 
@@ -177,23 +235,23 @@ int main( int argc, char** argv)
 {
     
     string filename1("../hillary_clinton.jpg");
-    string filename2("../donald_trump.jpg");
+    string filename2("../ted_cruz.jpg");
 
 
     //alpha controls the degree of morph
-    double alpha = 0.5;
+    double alpha = 0.7;
     
     //Read input images
     Mat img1 = imread(filename1);
     Mat img2 = imread(filename2);
-    
+
     //convert Mat to float data type
     img1.convertTo(img1, CV_32F);
     img2.convertTo(img2, CV_32F);
     
     
     //empty average image
-    Mat imgMorph = Mat::zeros(img1.size(), CV_32FC3);
+    Mat imgMorph = img1.clone();
     
 
     //Read points
@@ -201,35 +259,28 @@ int main( int argc, char** argv)
     calculateLandmarks(filename1, points1);
     calculateLandmarks(filename2, points2);
 
+
     vector<Point2f> points;
-
-    cout<<points1.size();
-    cout<<points2.size();
-
 
     //compute weighted average point coordinates
     for(int i = 0; i < points1.size(); i++)
     {
-        float x1 = points1[i].x, x2 = points2[i].x , y1 = points1[i].y, y2 = points2[i].y;
-        cout<<x1<<x2<<y1<<y2<<endl;
-    }
-
-    for(int i = 0; i < points1.size(); i++)
-    {
         float x, y;
         float x1 = points1[i].x, x2 = points2[i].x , y1 = points1[i].y, y2 = points2[i].y;
-        x = (1 - alpha)*x1 + alpha*x2;
-        y =  ( 1 - alpha )*y1+ alpha*y2;
+
+        x = x1;  /// ALTERATION: we map the regions of image2 to the exact regions of image1
+        y =  y1;
         
         points.push_back(Point2f(x,y));
         
     }
 
     vector<Triangle> triangles;
+
     //calculate triangle indices
     calculateTriangles(triangles);
 
-
+    // apply morphing algorithm
     for(Triangle & tri : triangles)
     {
         int x = tri[0], y = tri[1], z=tri[2];
