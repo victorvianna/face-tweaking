@@ -16,159 +16,9 @@ cv::Point create_point(dlib::full_object_detection &coord, int index){
     return cv::Point( coord.part(index).x(), coord.part(index).y() );
 }
 
-// extract points of the right side of the beard
-std::vector<cv::Point> extract_beard_Right(dlib::full_object_detection &landmarks){
-
-    std::vector<cv::Point> beard;
-    for(int i=8; i<=15; i++){
-        beard.push_back( create_point(landmarks, i) );
-    }
-    for(int i=54; i<=57; i++){
-        beard.push_back( create_point(landmarks, i) );
-    }
-    beard.push_back( create_point(landmarks, 8));
-    return beard;
-}
-
-// extract points of the left side of the beard
-std::vector<cv::Point> extract_beard_Left(dlib::full_object_detection &landmarks){
-
-    std::vector<cv::Point> beard;
-    for(int i=1; i<=8; i++){
-        beard.push_back( create_point(landmarks, i) );
-    }
-    for(int i=57; i<=59; i++){
-        beard.push_back( create_point(landmarks, i) );
-    }
-    beard.push_back( create_point(landmarks, 48));
-    beard.push_back((create_point(landmarks, 1)));
-    return beard;
-}
-
-// Draw delaunay triangles
-static std::vector<cv::Vec6f> draw_delaunay( cv::Mat &img, cv::Subdiv2D &subdiv, dlib::full_object_detection &landmarks)
-{
-    std::vector<cv::Vec6f> triangleList;
-    subdiv.getTriangleList(triangleList);
-    std::vector<cv::Point> pt(3);
-    cv::Size size = img.size();
-    cv::Rect rect(0,0, size.width, size.height);
-
-    for( size_t i = 0; i < triangleList.size(); i++ )
-    {
-        cv::Vec6f t = triangleList[i];
-        pt[0] = cv::Point(cvRound(t[0]), cvRound(t[1]));
-        pt[1] = cv::Point(cvRound(t[2]), cvRound(t[3]));
-        pt[2] = cv::Point(cvRound(t[4]), cvRound(t[5]));
-
-        // Draw rectangles completely inside the image.
-        if ( rect.contains(pt[0]) && rect.contains(pt[1]) && rect.contains(pt[2]))
-        {
-            if( pt[0].x == landmarks.part(0).x() && pt[0].y == landmarks.part(0).y() ||
-                    pt[1].x == landmarks.part(0).x() && pt[1].y == landmarks.part(0).y() ||
-                    pt[2].x == landmarks.part(0).x() && pt[2].y == landmarks.part(0).y() ) {
-                continue;
-            }
-            if( pt[0].x == landmarks.part(16).x() && pt[0].y == landmarks.part(16).y() ||
-                    pt[1].x == landmarks.part(16).x() && pt[1].y == landmarks.part(16).y() ||
-                    pt[2].x == landmarks.part(16).x() && pt[2].y == landmarks.part(16).y() ){
-                continue;
-            }
-
-            line(img, pt[0], pt[1], cv::Scalar(255, 0, 0), 1, CV_AA, 0);
-            line(img, pt[1], pt[2], cv::Scalar(255, 0, 0), 1, CV_AA, 0);
-            line(img, pt[2], pt[0], cv::Scalar(255, 0, 0), 1, CV_AA, 0);
-        }
-    }
-
-    return triangleList;
-}
-
-// Triangulation in the beard region
-void Triangulation(cv::Mat &image, std::vector<dlib::full_object_detection> &landmarks, std::vector<cv::Vec6f> &triangularLeft,
-                   std::vector<cv::Vec6f> &triangularRight){
-
-    // Load face detection and pose estimation models
-    dlib::frontal_face_detector detector = dlib::get_frontal_face_detector();
-    dlib::shape_predictor pose_model;
-    dlib::deserialize("../shape_predictor_68_face_landmarks.dat") >> pose_model;
-
-    // Creating a object from Mat into something dlib can deal with
-    dlib::cv_image<dlib::bgr_pixel> cimg(image);
-
-    // Detect faces
-    std::vector<dlib::rectangle> faces = detector(cimg, 1);
-
-    // Find the pose of each face
-    std::vector<dlib::full_object_detection> shapes;
-    for(unsigned long i=0; i < faces.size(); ++i){
-        shapes.push_back(pose_model(cimg, faces[i]));
-    }
-
-    int k = 0; // we have only one image
-
-    // TRIANGULATION PART
-
-    // Auxiliaries points to construct the triangulation
-    std::vector<cv::Point> right_points = extract_beard_Right(shapes[k]);
-    std::vector<cv::Point> left_points = extract_beard_Left(shapes[k]);
-
-    // Bounded region to triangulation
-    cv::Rect bounded_region(0, 0, image.size().width, image.size().height);
-
-    // Triangulation of the right side
-    cv::Subdiv2D subdiv1(bounded_region);
-    for(cv::Point2f p : right_points){
-        subdiv1.insert(p);
-    }
-
-    triangularRight = draw_delaunay(image, subdiv1, shapes[k]);
-
-    // Triangulation of the left side
-    cv::Subdiv2D subdiv2(bounded_region);
-    for(cv::Point2f p : left_points){
-        subdiv2.insert(p);
-    }
-
-    triangularLeft = draw_delaunay(image, subdiv2, shapes[k]);
-
-    // Verifying if all the points are inside the image
-    std::vector<cv::Point> points(3);
-    for(int i=0; i < triangularLeft.size(); i++){
-
-        // Test TriangularLeft
-        cv::Vec6f t = triangularLeft[i];
-        points[0] = cv::Point(cvRound(t[0]), cvRound(t[1]));
-        points[1] = cv::Point(cvRound(t[2]), cvRound(t[3]));
-        points[2] = cv::Point(cvRound(t[4]), cvRound(t[5]));
-
-        if ( bounded_region.contains(points[0]) && bounded_region.contains(points[1]) && bounded_region.contains(points[2])){
-            // all good
-        }
-        else{
-            triangularLeft.erase(triangularLeft.begin()+i);
-            std::cout << "apagando ponto Left" << std::endl;
-        }
-
-        // Test TriangularRight
-        t = triangularRight[i];
-        points[0] = cv::Point(cvRound(t[0]), cvRound(t[1]));
-        points[1] = cv::Point(cvRound(t[2]), cvRound(t[3]));
-        points[2] = cv::Point(cvRound(t[4]), cvRound(t[5]));
-
-        if ( bounded_region.contains(points[0]) && bounded_region.contains(points[1]) && bounded_region.contains(points[2])){
-            // all good
-        }
-        else{
-            triangularRight.erase(triangularRight.begin()+i);
-            std::cout << "apagando ponto Right" << std::endl;
-        }
-
-    }
-
-}
-
-void Manual_Triangulation(cv::Mat &image, std::string filename, std::vector<dlib::full_object_detection> &landmarks, std::vector<std::vector<int>> &triangulation_indices){
+// Get triangle triples from file 'points.txt' and find the face landmarks
+void Manual_Triangulation(cv::Mat &image, std::string filename, std::vector<dlib::full_object_detection> &landmarks,
+                          std::vector<std::vector<int>> &triangulation_indices){
 
     // Load face detection and pose estimation models
     dlib::frontal_face_detector detector = dlib::get_frontal_face_detector();
@@ -208,8 +58,8 @@ void triangulation_points(std::vector<dlib::full_object_detection> &landmarks, s
 }
 
 // Apply affine transform calculated using srcTri and dstTri to src
-void applyAffineTransform(cv::Mat &warpImage, cv::Mat &src, std::vector<cv::Point2f> &srcTri, std::vector<cv::Point2f> &dstTri)
-{
+void applyAffineTransform(cv::Mat &warpImage, cv::Mat &src, std::vector<cv::Point2f> &srcTri,
+                          std::vector<cv::Point2f> &dstTri) {
     // Given a pair of triangles, find the affine transform.
     cv::Mat warpMat = cv::getAffineTransform( srcTri, dstTri );
 
@@ -218,8 +68,8 @@ void applyAffineTransform(cv::Mat &warpImage, cv::Mat &src, std::vector<cv::Poin
 }
 
 // Warps and alpha blends triangular regions from img1 and img2 to img
-void warpTriangle(cv::Mat &img1, cv::Mat &img2, cv::Mat &img, std::vector<cv::Point2f> &t1, std::vector<cv::Point2f> &t2,
-                  std::vector<cv::Point2f> &t, double alpha) {
+void warpTriangle(cv::Mat &img1, cv::Mat &img2, cv::Mat &img, std::vector<cv::Point2f> &t1,
+                  std::vector<cv::Point2f> &t2, std::vector<cv::Point2f> &t, double alpha) {
 
     // Find bounding rectangle for each triangle
     cv::Rect r = boundingRect(t);
@@ -254,14 +104,12 @@ void warpTriangle(cv::Mat &img1, cv::Mat &img2, cv::Mat &img, std::vector<cv::Po
     applyAffineTransform(warpImage2, img2Rect, t2Rect, tRect);
 
     //Alpha blend rectangular patches
-
     cv::Mat imgRect = (1.0 - alpha) * warpImage1 + alpha * warpImage2;
 
     // Copy triangular region of the rectangular patch to the output image
     multiply(imgRect,mask, imgRect);
     multiply(img(r), cv::Scalar(1.0,1.0,1.0) - mask, img(r));
     img(r) = img(r) + imgRect;
-
 }
 
 void beard_mask(dlib::full_object_detection &landmarks, std::vector<cv::Point2f> &mask){
@@ -281,26 +129,31 @@ void beard_mask(dlib::full_object_detection &landmarks, std::vector<cv::Point2f>
 
 int main() {
 
-
     // Loading images
     std::string image_name = "../tomcruise2.jpg";
-    std::string beard_name = "../whitebeard_size.jpg";
+    std::string beard_name = "../whitebeard.jpg";
+//    std::string beard_name = "../whitebeard_resized.jpg";
+    std::string beard_resized_name = "../whitebeard_resized.jpg";
+    std::string full_morphed_name = "../fullmorphed.jpg";
+    std::string mask_name = "../mask.jpg";
 
     cv::Mat image = cv::imread(image_name);
     cv::Mat beard_image = cv::imread(beard_name);
+    cv::Mat original_beard_image = beard_image.clone();
 
-//    if(image.size().width != beard_image.size().width ||
-//            image.size().height != beard_image.size().height){
-//        std::cout << "doing resize" << std::endl;
-//        cv::resize(beard_image, beard_image, image.size(), 0, 0, cv::INTER_LINEAR);
-////        cv::resize(image, image, beard_image.size(), 0, 0, cv::INTER_LINEAR);
-//    }
+    if(image.size().width != original_beard_image.size().width ||
+            image.size().height != original_beard_image.size().height){
+        std::cout << "Doing Resize" << std::endl;
+        cv::resize(original_beard_image, beard_image, image.size(), 0, 0, cv::INTER_LINEAR);
+        cv::imwrite(beard_resized_name, beard_image);
+        beard_image = cv::imread(beard_resized_name);
+    }
 
-    // Resize
-//    cv::resize(beard_image, beard_image, image.size(), 0, 0, cv::INTER_LINEAR);
-////    cv::resize(image, image, beard_image.size(), 0, 0, cv::INTER_LINEAR);
-//    cv::imwrite("../whitebeard_size.jpg", beard_image);
+    std::cout << beard_image.size() << std::endl;
+    std::cout << original_beard_image.size() << std::endl;
+    std::cout << image.size() << std::endl;
 
+    return 0;
 
     // Convert Mat to float data type
     image.convertTo(image, CV_32F);
@@ -309,65 +162,29 @@ int main() {
     // Clone original image
     cv::Mat warpedImage = image.clone();
 
-    // Display both images before the morphing
-//    cv::namedWindow("face", 1);
-//    imshow("face", image/255.0);
-//    cv::namedWindow("beard_face", 1);
-//    imshow("beard_face", beard_image/255.0);
-//
-//    cv::waitKey(0);
-
-
     // Triangulation Algorithm
-    std::vector<dlib::full_object_detection> Image_landmarks;
-    std::vector< std::vector<int> > Image_triangulation_indices;
-//    std::vector<cv::Vec6f> triangularLeft, triangularRight;
-//    Triangulation(image, Image_landmarks, triangularLeft, triangularRight);
-
-    std::vector<dlib::full_object_detection> BeardImage_landmarks;
-    std::vector< std::vector<int> > BeardImage_triangulation_indices;
-//    std::vector<cv::Vec6f> triangularRight_beard_image, triangularLeft_beard_image;
-//    Triangulation(beard_image, BeardImage_landmarks, triangularLeft_beard_image, triangularRight_beard_image);
+    std::cout << "Triangulation Algorithm" << std::endl;
+    std::vector<dlib::full_object_detection> Image_landmarks, BeardImage_landmarks;
+    std::vector< std::vector<int> > Image_triangulation_indices, BeardImage_triangulation_indices;
 
     Manual_Triangulation(image, image_name, Image_landmarks, Image_triangulation_indices);
     Manual_Triangulation(beard_image, beard_name, BeardImage_landmarks, BeardImage_triangulation_indices);
 
-    std::vector<std::vector<cv::Point2f>> Image_triangulation_points;
-    std::vector<std::vector<cv::Point2f>> BeardImage_triangulation_points;
+    std::vector<std::vector<cv::Point2f>> Image_triangulation_points, BeardImage_triangulation_points;
 
     triangulation_points(Image_landmarks, Image_triangulation_indices, Image_triangulation_points);
     triangulation_points(BeardImage_landmarks, BeardImage_triangulation_indices, BeardImage_triangulation_points);
 
     // ALPHA
-    double alpha = 0.2;
-
-    // Type of Morphing
-    bool full = true;
+    double alpha = 1;
 
     // WarpTriangles
+    std::cout << "WarpTriangles" << std::endl;
     int size = Image_triangulation_points.size();
-
-    if(!full){
-        for(int i=0; i < size; i++){
-
-            if(i==0 || i == size - 1) alpha = 0.20;
-            else{
-                if(i==1 || i == size - 2) alpha = 0.25;
-                else alpha = 0.3;
-            }
-
-            warpTriangle(image, beard_image, warpedImage, Image_triangulation_points[i], BeardImage_triangulation_points[i],
-                         Image_triangulation_points[i], alpha);
-        }
+    for(int i=0; i < size; i++) {
+        warpTriangle(image, beard_image, warpedImage, Image_triangulation_points[i],
+                     BeardImage_triangulation_points[i], Image_triangulation_points[i], alpha);
     }
-    else{
-        for(int i=0; i < size; i++) {
-            warpTriangle(image, beard_image, warpedImage, Image_triangulation_points[i], BeardImage_triangulation_points[i],
-                        Image_triangulation_points[i], 1);
-        }
-    }
-
-    cv::imwrite("../morphedfull7.jpg", warpedImage);
 
     // Create an all white mask
     std::vector<cv::Point2f> mask;
@@ -382,6 +199,28 @@ int main() {
         cv::fillConvexPoly(src_mask, t, cv::Scalar(255,255,255), 16, 0);
     }
 
-    cv::imwrite("../mask7.jpg", src_mask);
+    // Saving FullMorphed and Mask
+    cv::imwrite(full_morphed_name, warpedImage);
+    cv::imwrite(mask_name, src_mask);
+    cv::Mat mask_image = cv::imread(mask_name, 0);
+
+    // Loading sourceImage and warpedImage
+    cv::Mat original_image = cv::imread(image_name);
+    cv::Mat warped_image = cv::imread(full_morphed_name);
+
+    // Finding position to seamlessclone function
+    cv::Rect r = cv::boundingRect(mask);
+    cv::Point center = (r.tl() + r.br()) / 2;
+
+    // Seamlessly clone src into dst and put the results in output
+    cv::Mat normal_clone;
+    cv::Mat mixed_clone;
+
+    std::cout << "SeamLessClone Algorithm" << std::endl;
+    cv::seamlessClone(warped_image, original_image, mask_image, center, normal_clone, cv::NORMAL_CLONE);
+    cv::seamlessClone(warped_image, original_image, mask_image, center, mixed_clone, cv::MIXED_CLONE);
+
+    cv::imwrite("../TESTmorphed_normalclone.jpg", normal_clone);
+    cv::imwrite("../TESTmorphed_mixedclone.jpg", mixed_clone);
 
 }
