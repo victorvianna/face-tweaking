@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package login;
+package app;
 
 import java.io.File;
 import java.util.LinkedList;
@@ -27,7 +27,7 @@ import javafx.stage.Stage;
  *
  * @author barcik
  */
-public class Login extends Application {
+public class DesktopApp extends Application {
    
     Stage window;
     Scene homeScene;
@@ -107,15 +107,8 @@ public class Login extends Application {
 //       grid.add(beardButton, 0, 1);
 //       grid.add(eyeButton, 0, 2);
 //       grid.add(smileButton, 0, 3);
-//              
-//       Label userName = new Label("User Name:");
-//       grid.add(userName, 0, 1);
-//       TextField userTextField = new TextField();
-//       grid.add(userTextField, 1, 1);
-//       Label pw = new Label("Password:");
-//       grid.add(pw, 0, 2);
-//       PasswordField pwBox = new PasswordField();
-//       grid.add(pwBox, 1, 2);
+
+
         Button exit = new Button("Exit");
         exit.setOnAction(e -> System.exit(0));
         HBox hbExit = new HBox(10);
