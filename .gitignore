@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 src/external
 src/scrap
 **/cmake-build-debug
 **/.idea
+scrap
+# Compiled class file
+*.class
 
 # Prerequisites
 *.d
@@ -35,3 +39,4 @@ src/scrap
 *.exe
 *.out
 *.app
+

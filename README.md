@@ -9,11 +9,16 @@ Cauim de Souza Lima
 Gabriel Fedrigo Barcik
 Victor Hugo Vianna
 
+## Requirements
+
+Java 1.8
+OpenCV 3.2
+
 ## Instructions
 
 Open a shell and run
 ```
-$ sudo ./face-tweak
+$ sudo bash RUN.sh
 ```
 
 ## Acknowledgements
