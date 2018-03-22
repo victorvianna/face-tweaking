@@ -1,8 +1,21 @@
-//#include "../lib/all_headers.h"
-#include "../features/test_feature/test_feature.h"
+#include "../lib/all_headers.h"
+#include<iostream>
+using namespace std;
 
 int main(int argc, char **argv) {
-    //assert(argc==3 || argc==4);
-    sayHi();
+    BaseFeature* f;
+    if(argc!=4)
+        throw("Number of arguments is not enough.");
+    if(string(argv[1])==string("eye-color"))
+    {
+        f = new EyeColor(argc, argv);
+    }
+    else
+    {
+        throw("Invalid feature");
+        return -1;
+    }
+    f->calculateAndDisplay();
+
     return 0;
 }

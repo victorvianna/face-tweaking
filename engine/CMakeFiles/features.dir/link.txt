@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfeatures.a  CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/features/eye-color/eye-color.cpp.o CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/features/test_feature/test_feature.cpp.o
+/usr/bin/ranlib libfeatures.a

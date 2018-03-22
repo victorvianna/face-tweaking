@@ -1,4 +1,5 @@
 #ifndef __ALL_HEADERS__
 #define __ALL_HEADERS__
-#include "../features/test_feature/test_feature.h"
+#include "../lib/features/BaseFeature.h"
+#include "../lib/features/EyeColor/EyeColor.h"
 #endif

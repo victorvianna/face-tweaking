@@ -1,0 +1,7 @@
+/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/rebuild_cache.dir
+/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/features.dir
+/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/edit_cache.dir
+/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/engine.dir
+/home/victorvianna/Desktop/FaceTweaking/engine/dlib/CMakeFiles/rebuild_cache.dir
+/home/victorvianna/Desktop/FaceTweaking/engine/dlib/CMakeFiles/dlib.dir
+/home/victorvianna/Desktop/FaceTweaking/engine/dlib/CMakeFiles/edit_cache.dir
