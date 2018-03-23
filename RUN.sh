@@ -1,0 +1,1 @@
+ant -S -f GUI jfxsa-run

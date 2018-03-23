@@ -6,16 +6,24 @@
 package app;
 
 import java.io.File;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -31,10 +39,14 @@ public class main extends Application {
    
     Stage window;
     Scene homeScene;
+    
+    private final String FEATURES_DIR = "../lib/features";
+    private final String ENGINE_DIR = "../engine/cmake-build-debug/engine";
+    private final String IMAGE_DIR = "../image.jpg";
 
     @Override
-    public void start(Stage primaryStage) {
-
+    public void start(Stage primaryStage) throws Exception {
+        final int[] index = new int [1]; index[0]= 0;
         final Scene[] scenes;
 
         window = primaryStage;
@@ -55,58 +67,132 @@ public class main extends Application {
 
 //       grid.add(scenetitle, 0, 0, 2, 1);
         // Buttons for the features
-        List<Button> featuresOptions = new LinkedList<>();
-        File[] files = new File("../features").listFiles();
-        for (File file : files) {
-            featuresOptions.add(new Button(file.getName()));
+        List<Button> features = new LinkedList<>();
+        ArrayList<File> files= new ArrayList<>();
+        ArrayList<File> featureFiles =new ArrayList<>();
+        files.add(new File(FEATURES_DIR));
+        for(int i=0;i<files.size(); i++){
+            File file = files.get(i);
+            if (file.getName().toLowerCase().endsWith(".cpp") && 
+                    !file.getName().equals("BaseFeature.cpp")) {
+                features.add(new Button(shortName(file)));
+                featureFiles.add(file);
+            }
+            else if (file.isDirectory())
+            {
+                File[] sons = file.listFiles();
+                for(File son : sons)
+                    files.add(son);
+            }
         }
+        
+        scenes = new Scene[features.size()];
 
-        scenes = new Scene[featuresOptions.size()];
-
+        
+        ArrayList<ArrayList<File> > featOptions = new ArrayList<>();
+        
         // Handling buttons
-        // falta adicionar a chamada do .exe face_tweaking
+        
         int counter = 0;
-        for (Button b : featuresOptions) {
+        for (int i=0; i<features.size(); i++) {
+            featOptions.add(new ArrayList<>());
+            Button b = features.get(i);
+            File feature = featureFiles.get(i);
+            ObservableList<String> optionList = FXCollections.observableArrayList();
             VBox box = new VBox(20);
             box.setPadding(new Insets(15, 15, 15, 15));
             box.setAlignment(Pos.CENTER);
-            Button returnBtn = new Button("return");
+            Button returnBtn = new Button("Return");
             returnBtn.setOnAction(e -> window.setScene(homeScene));
-            Button runBtn = new Button("run");
-            runBtn.setOnAction(e -> System.out.println("call program .exe"));
+            Button runBtn = new Button("Run");
+                       
+            
             Text text = new Text(b.getText());
             box.getChildren().add(text);
             
             // Get options from folder
-            ObservableList<String> optionList = FXCollections.observableArrayList("a", "b", "c");
-            ChoiceBox<String> options = new ChoiceBox<String>(optionList);
-            box.getChildren().add(options);
+            File mediaDir = new File(feature.getParentFile().getAbsolutePath()+"/media");
             
+            if(mediaDir.exists())
+            {
+                for(File img : mediaDir.listFiles())
+                {
+                    if(getExtension(img).equals(new String("png")) || getExtension(img).equals(new String("jpg"))){
+                        optionList.add(shortName(img));
+                        featOptions.get(i).add(img);
+                    }
+                    
+                }
+            }
+            else
+                throw new Exception("No media folder found");
+            
+            final ChoiceBox choiceBox = new ChoiceBox(optionList);
+            
+            Label label = new Label();
+            
+            choiceBox.getSelectionModel().selectedItemProperty()
+            .addListener((ObservableValue observable, 
+                    Object oldValue, Object newValue) -> {
+                label.setText((String)newValue);                
+            });
+            /*         WE HAVE TO CORRECT THIS LATER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DON'T ERASE
+            choiceBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>(){
+                @Override
+                public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                    index[0] = newValue.intValue();
+                    choiceBox.getSelectionModel().select(index[0]);
+                    
+                }
+            });            
+            choiceBox.getSelectionModel().selectFirst();
+            */
+                  
+                        
+            
+            runBtn.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    try
+                    {
+                        System.out.println(ENGINE_DIR+" "+shortName(feature)+" "+IMAGE_DIR+" "+mediaDir+"/"+label.getText()+".jpg");
+                        final ProcessBuilder  pb = new ProcessBuilder(ENGINE_DIR, shortName(feature),IMAGE_DIR, mediaDir+"/"+label.getText()+".jpg");
+                        //final ProcessBuilder  pb = new ProcessBuilder("bash touch OI.txt");
+                        Process p = pb.start();     // Start the process.
+                        System.out.println("Process started!");
+                        p.waitFor();                // Wait for the process to finish.
+                        System.out.println("Process finished!");
+                    }
+                    catch(IOException | InterruptedException exc)
+                    {
+                        exc.printStackTrace();
+                    }
+                    
+                }
+            });       
+       
+            box.getChildren().add(choiceBox);            
             box.getChildren().add(runBtn);
             box.getChildren().add(returnBtn);
+            
+            
             
             Scene s = new Scene(box, 300, 250);
             scenes[counter] = s;
             b.setOnAction(e -> window.setScene(s));
             counter++;
+            
+            
+            
+            
+            
+            
         }
-
-        homeLayout.getChildren().addAll(featuresOptions);
+        
+        
+        
+        homeLayout.getChildren().addAll(features);
         homeLayout.setAlignment(Pos.CENTER);
 
-        // Manual insertion of buttons
-//       MenuButton beardButton = new MenuButton("Beard");
-//       beardButton.getItems().addAll(new MenuItem("small"), new MenuItem("long"), new MenuItem("white"));
-//       
-//       MenuButton eyeButton = new MenuButton("Eyes");
-//       eyeButton.getItems().addAll(new MenuItem("green"), new MenuItem("blue"), new MenuItem("brown"));
-//             
-//       MenuButton smileButton = new MenuButton("Smile");
-//       smileButton.getItems().addAll(new MenuItem("female"), new MenuItem("male"));
-//       
-//       grid.add(beardButton, 0, 1);
-//       grid.add(eyeButton, 0, 2);
-//       grid.add(smileButton, 0, 3);
 
 
         Button exit = new Button("Exit");
@@ -125,6 +211,15 @@ public class main extends Application {
         
     }
 
+    private String shortName(File f)
+    {
+        return f.getName().substring(0, f.getName().lastIndexOf('.'));
+    }
+    private String getExtension(File f)
+    {
+        return f.getName().substring(f.getName().lastIndexOf('.')+1, f.getName().length());
+    }
+    
     /**
      * @param args the command line arguments
      */

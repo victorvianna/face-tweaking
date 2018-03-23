@@ -20,8 +20,10 @@ typedef vector<int> Triangle;
 #define LEFT_EYE_END 41
 #define RIGHT_EYE_BEGIN 42 // index of rightmost eye on the image
 #define RIGHT_EYE_END 47
-#define DATA_FILENAME "../shape_predictor_68_face_landmarks.dat"
-#define TRIANGLE_FILENAME "../tri.txt"
+//#define DATA_FILENAME "../../lib/shape_predictor_68_face_landmarks.dat"
+#define DATA_FILENAME "/home/victorvianna/Desktop/FaceTweaking/lib/shape_predictor_68_face_landmarks.dat" /// !! need to correct this later
+//#define TRIANGLE_FILENAME "../../lib/features/EyeColor/tri.txt" /// !! need to correct this later
+#define TRIANGLE_FILENAME "/home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/tri.txt"
 
 EyeColor::EyeColor (int argc, char** argv) : BaseFeature(argc, argv)
 {
@@ -31,7 +33,7 @@ EyeColor::EyeColor (int argc, char** argv) : BaseFeature(argc, argv)
     imgSrc = imread(fileSrc);
 }
 
-EyeColor::~EyeColor () : ~BaseFeature()
+EyeColor::~EyeColor() 
 {
     
 }        

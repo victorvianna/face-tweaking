@@ -16,7 +16,7 @@ protected:
 public:
 	BaseFeature(int argc, char** argv);
 	~BaseFeature();
-	virtual void calculateAndDisplay();
+	virtual void calculateAndDisplay()=0;
 };
 
 #endif
