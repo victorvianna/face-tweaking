@@ -1,5 +1,6 @@
 #ifndef EYE_COLOR_H
 #define EYE_COLOR_H
+
 #include "../BaseFeature.h"
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>

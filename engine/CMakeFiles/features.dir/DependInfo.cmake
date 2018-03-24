@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/victorvianna/Desktop/FaceTweaking/features/eye-color/eye-color.cpp" "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/features/eye-color/eye-color.cpp.o"
-  "/home/victorvianna/Desktop/FaceTweaking/features/test_feature/test_feature.cpp" "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/features/test_feature/test_feature.cpp.o"
+  "/home/victorvianna/Desktop/FaceTweaking/lib/features/AddBeard/AddBeard.cpp" "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/AddBeard/AddBeard.cpp.o"
+  "/home/victorvianna/Desktop/FaceTweaking/lib/features/BaseFeature.cpp" "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/BaseFeature.cpp.o"
+  "/home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.cpp" "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

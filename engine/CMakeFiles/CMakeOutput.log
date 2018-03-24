@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/3.10.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/3.9.6/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/3.9.6/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_efa66/fast"
-/usr/bin/make -f CMakeFiles/cmTC_efa66.dir/build.make CMakeFiles/cmTC_efa66.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ef87e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ef87e.dir/build.make CMakeFiles/cmTC_ef87e.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_efa66.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_efa66.dir/testCCompiler.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_efa66
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_efa66.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_efa66.dir/testCCompiler.c.o  -o cmTC_efa66 
+Building C object CMakeFiles/cmTC_ef87e.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_ef87e.dir/testCCompiler.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_ef87e
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef87e.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_ef87e.dir/testCCompiler.c.o  -o cmTC_ef87e 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ef937/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ef937.dir/build.make CMakeFiles/cmTC_ef937.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b3b1f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b3b1f.dir/build.make CMakeFiles/cmTC_b3b1f.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ef937.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_ef937.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_ef937
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef937.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_ef937.dir/CMakeCCompilerABI.c.o  -o cmTC_ef937 
+Building C object CMakeFiles/cmTC_b3b1f.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_b3b1f.dir/CMakeCCompilerABI.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_b3b1f
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3b1f.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_b3b1f.dir/CMakeCCompilerABI.c.o  -o cmTC_b3b1f 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,9 +61,9 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-11ubuntu1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ef937' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvHHGo4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ef937 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ef937.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ef937' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b3b1f' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccP3mCKC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b3b1f /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_b3b1f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b3b1f' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
@@ -71,14 +71,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ef937/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ef937.dir/build.make CMakeFiles/cmTC_ef937.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_b3b1f/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_b3b1f.dir/build.make CMakeFiles/cmTC_b3b1f.dir/build]
   ignore line: [make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_ef937.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_ef937.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_ef937]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef937.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_ef937.dir/CMakeCCompilerABI.c.o  -o cmTC_ef937 ]
+  ignore line: [Building C object CMakeFiles/cmTC_b3b1f.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_b3b1f.dir/CMakeCCompilerABI.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_b3b1f]
+  ignore line: [/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3b1f.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_b3b1f.dir/CMakeCCompilerABI.c.o  -o cmTC_b3b1f ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-11ubuntu1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ef937' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvHHGo4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ef937 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ef937.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b3b1f' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccP3mCKC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b3b1f /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_b3b1f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccvHHGo4.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccP3mCKC.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_ef937] ==> ignore
+    arg [cmTC_b3b1f] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -127,7 +127,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_ef937.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_b3b1f.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -157,14 +157,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_11731/fast"
-/usr/bin/make -f CMakeFiles/cmTC_11731.dir/build.make CMakeFiles/cmTC_11731.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_7e810/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7e810.dir/build.make CMakeFiles/cmTC_7e810.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_11731.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_11731.dir/feature_tests.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.c
-Linking C executable cmTC_11731
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11731.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_11731.dir/feature_tests.c.o  -o cmTC_11731 
+Building C object CMakeFiles/cmTC_7e810.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_7e810.dir/feature_tests.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.c
+Linking C executable cmTC_7e810
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e810.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_7e810.dir/feature_tests.c.o  -o cmTC_7e810 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
@@ -177,14 +177,14 @@ make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMake
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c73d5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c73d5.dir/build.make CMakeFiles/cmTC_c73d5.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2dd01/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2dd01.dir/build.make CMakeFiles/cmTC_2dd01.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c73d5.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_c73d5.dir/feature_tests.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.c
-Linking C executable cmTC_c73d5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c73d5.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_c73d5.dir/feature_tests.c.o  -o cmTC_c73d5 
+Building C object CMakeFiles/cmTC_2dd01.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_2dd01.dir/feature_tests.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.c
+Linking C executable cmTC_2dd01
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2dd01.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_2dd01.dir/feature_tests.c.o  -o cmTC_2dd01 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
@@ -197,14 +197,14 @@ make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMake
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d8200/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d8200.dir/build.make CMakeFiles/cmTC_d8200.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_13119/fast"
+/usr/bin/make -f CMakeFiles/cmTC_13119.dir/build.make CMakeFiles/cmTC_13119.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d8200.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_d8200.dir/feature_tests.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.c
-Linking C executable cmTC_d8200
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8200.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_d8200.dir/feature_tests.c.o  -o cmTC_d8200 
+Building C object CMakeFiles/cmTC_13119.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_13119.dir/feature_tests.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.c
+Linking C executable cmTC_13119
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13119.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_13119.dir/feature_tests.c.o  -o cmTC_13119 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
@@ -215,28 +215,28 @@ make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMake
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8af79/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8af79.dir/build.make CMakeFiles/cmTC_8af79.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_01abf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_01abf.dir/build.make CMakeFiles/cmTC_01abf.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8af79.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_8af79.dir/testCXXCompiler.cxx.o -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_8af79
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8af79.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_8af79.dir/testCXXCompiler.cxx.o  -o cmTC_8af79 
+Building CXX object CMakeFiles/cmTC_01abf.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_01abf.dir/testCXXCompiler.cxx.o -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_01abf
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01abf.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_01abf.dir/testCXXCompiler.cxx.o  -o cmTC_01abf 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e425f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e425f.dir/build.make CMakeFiles/cmTC_e425f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_76828/fast"
+/usr/bin/make -f CMakeFiles/cmTC_76828.dir/build.make CMakeFiles/cmTC_76828.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e425f.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_e425f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_e425f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e425f.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_e425f.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_e425f 
+Building CXX object CMakeFiles/cmTC_76828.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_76828.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_76828
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76828.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_76828.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_76828 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -248,9 +248,9 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-11ubuntu1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e425f' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpcrH8w.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e425f /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e425f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e425f' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_76828' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccI8YBnu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_76828 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_76828.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_76828' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
@@ -258,14 +258,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_e425f/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e425f.dir/build.make CMakeFiles/cmTC_e425f.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_76828/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_76828.dir/build.make CMakeFiles/cmTC_76828.dir/build]
   ignore line: [make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_e425f.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_e425f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_e425f]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e425f.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_e425f.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_e425f ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_76828.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_76828.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_76828]
+  ignore line: [/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76828.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_76828.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_76828 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -277,13 +277,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-11ubuntu1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e425f' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpcrH8w.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e425f /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e425f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_76828' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccI8YBnu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_76828 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_76828.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccpcrH8w.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccI8YBnu.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -302,7 +302,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_e425f] ==> ignore
+    arg [cmTC_76828] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -314,7 +314,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_e425f.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_76828.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -342,14 +342,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f1b29/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f1b29.dir/build.make CMakeFiles/cmTC_f1b29.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5c171/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5c171.dir/build.make CMakeFiles/cmTC_5c171.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f1b29.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_f1b29.dir/feature_tests.cxx.o -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f1b29
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1b29.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_f1b29.dir/feature_tests.cxx.o  -o cmTC_f1b29 
+Building CXX object CMakeFiles/cmTC_5c171.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_5c171.dir/feature_tests.cxx.o -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5c171
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c171.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_5c171.dir/feature_tests.cxx.o  -o cmTC_5c171 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
@@ -415,14 +415,14 @@ make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMake
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_01408/fast"
-/usr/bin/make -f CMakeFiles/cmTC_01408.dir/build.make CMakeFiles/cmTC_01408.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f9dc2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f9dc2.dir/build.make CMakeFiles/cmTC_f9dc2.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_01408.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_01408.dir/feature_tests.cxx.o -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_01408
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01408.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_01408.dir/feature_tests.cxx.o  -o cmTC_01408 
+Building CXX object CMakeFiles/cmTC_f9dc2.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_f9dc2.dir/feature_tests.cxx.o -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f9dc2
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f9dc2.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_f9dc2.dir/feature_tests.cxx.o  -o cmTC_f9dc2 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
@@ -488,14 +488,14 @@ make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMake
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_60194/fast"
-/usr/bin/make -f CMakeFiles/cmTC_60194.dir/build.make CMakeFiles/cmTC_60194.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_46243/fast"
+/usr/bin/make -f CMakeFiles/cmTC_46243.dir/build.make CMakeFiles/cmTC_46243.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_60194.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_60194.dir/feature_tests.cxx.o -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_60194
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60194.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_60194.dir/feature_tests.cxx.o  -o cmTC_60194 
+Building CXX object CMakeFiles/cmTC_46243.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_46243.dir/feature_tests.cxx.o -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_46243
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46243.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_46243.dir/feature_tests.cxx.o  -o cmTC_46243 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
@@ -561,14 +561,14 @@ make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMake
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d8ba3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d8ba3.dir/build.make CMakeFiles/cmTC_d8ba3.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_edc9f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_edc9f.dir/build.make CMakeFiles/cmTC_edc9f.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d8ba3.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_d8ba3.dir/feature_tests.cxx.o -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_d8ba3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8ba3.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_d8ba3.dir/feature_tests.cxx.o  -o cmTC_d8ba3 
+Building CXX object CMakeFiles/cmTC_edc9f.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_edc9f.dir/feature_tests.cxx.o -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_edc9f
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edc9f.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_edc9f.dir/feature_tests.cxx.o  -o cmTC_edc9f 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
@@ -632,224 +632,224 @@ make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMake
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1ff42/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1ff42.dir/build.make CMakeFiles/cmTC_1ff42.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_05b72/fast"
+/usr/bin/make -f CMakeFiles/cmTC_05b72.dir/build.make CMakeFiles/cmTC_05b72.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1ff42.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_1ff42.dir/CheckIncludeFile.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_1ff42
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ff42.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_1ff42.dir/CheckIncludeFile.c.o  -o cmTC_1ff42 
+Building C object CMakeFiles/cmTC_05b72.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_05b72.dir/CheckIncludeFile.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_05b72
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05b72.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_05b72.dir/CheckIncludeFile.c.o  -o cmTC_05b72 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_01b0d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_01b0d.dir/build.make CMakeFiles/cmTC_01b0d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_81d92/fast"
+/usr/bin/make -f CMakeFiles/cmTC_81d92.dir/build.make CMakeFiles/cmTC_81d92.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_01b0d.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_01b0d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_01b0d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01b0d.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_01b0d.dir/CheckFunctionExists.c.o  -o cmTC_01b0d -lpthread 
+Building C object CMakeFiles/cmTC_81d92.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_81d92.dir/CheckFunctionExists.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_81d92
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81d92.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_81d92.dir/CheckFunctionExists.c.o  -o cmTC_81d92 -lpthread 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a1934/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a1934.dir/build.make CMakeFiles/cmTC_a1934.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_123c9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_123c9.dir/build.make CMakeFiles/cmTC_123c9.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a1934.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_a1934.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_a1934
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1934.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay    -rdynamic CMakeFiles/cmTC_a1934.dir/CheckFunctionExists.c.o  -o cmTC_a1934 /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+Building C object CMakeFiles/cmTC_123c9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_123c9.dir/CheckFunctionExists.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_123c9
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_123c9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay    -rdynamic CMakeFiles/cmTC_123c9.dir/CheckFunctionExists.c.o  -o cmTC_123c9 /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the function gethostbyname exists passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0cd27/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0cd27.dir/build.make CMakeFiles/cmTC_0cd27.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_96d9c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_96d9c.dir/build.make CMakeFiles/cmTC_96d9c.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0cd27.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_0cd27.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_0cd27
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0cd27.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname    -rdynamic CMakeFiles/cmTC_0cd27.dir/CheckFunctionExists.c.o  -o cmTC_0cd27 
+Building C object CMakeFiles/cmTC_96d9c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_96d9c.dir/CheckFunctionExists.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_96d9c
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96d9c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname    -rdynamic CMakeFiles/cmTC_96d9c.dir/CheckFunctionExists.c.o  -o cmTC_96d9c 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the function connect exists passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_28a29/fast"
-/usr/bin/make -f CMakeFiles/cmTC_28a29.dir/build.make CMakeFiles/cmTC_28a29.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_68532/fast"
+/usr/bin/make -f CMakeFiles/cmTC_68532.dir/build.make CMakeFiles/cmTC_68532.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_28a29.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_28a29.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_28a29
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28a29.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect    -rdynamic CMakeFiles/cmTC_28a29.dir/CheckFunctionExists.c.o  -o cmTC_28a29 
+Building C object CMakeFiles/cmTC_68532.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_68532.dir/CheckFunctionExists.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_68532
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68532.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect    -rdynamic CMakeFiles/cmTC_68532.dir/CheckFunctionExists.c.o  -o cmTC_68532 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the function remove exists passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3894d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3894d.dir/build.make CMakeFiles/cmTC_3894d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e56cf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e56cf.dir/build.make CMakeFiles/cmTC_e56cf.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3894d.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_3894d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_3894d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3894d.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove    -rdynamic CMakeFiles/cmTC_3894d.dir/CheckFunctionExists.c.o  -o cmTC_3894d 
+Building C object CMakeFiles/cmTC_e56cf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_e56cf.dir/CheckFunctionExists.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e56cf
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e56cf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove    -rdynamic CMakeFiles/cmTC_e56cf.dir/CheckFunctionExists.c.o  -o cmTC_e56cf 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the function shmat exists passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8d416/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8d416.dir/build.make CMakeFiles/cmTC_8d416.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b93bd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b93bd.dir/build.make CMakeFiles/cmTC_b93bd.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8d416.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_8d416.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_8d416
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d416.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat    -rdynamic CMakeFiles/cmTC_8d416.dir/CheckFunctionExists.c.o  -o cmTC_8d416 
+Building C object CMakeFiles/cmTC_b93bd.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_b93bd.dir/CheckFunctionExists.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b93bd
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b93bd.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat    -rdynamic CMakeFiles/cmTC_b93bd.dir/CheckFunctionExists.c.o  -o cmTC_b93bd 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cc2ce/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cc2ce.dir/build.make CMakeFiles/cmTC_cc2ce.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6a06e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6a06e.dir/build.make CMakeFiles/cmTC_6a06e.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cc2ce.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_cc2ce.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_cc2ce
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc2ce.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    -rdynamic CMakeFiles/cmTC_cc2ce.dir/CheckFunctionExists.c.o  -o cmTC_cc2ce -lICE 
+Building C object CMakeFiles/cmTC_6a06e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_6a06e.dir/CheckFunctionExists.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6a06e
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a06e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    -rdynamic CMakeFiles/cmTC_6a06e.dir/CheckFunctionExists.c.o  -o cmTC_6a06e -lICE 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the function png_create_read_struct exists passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_624f2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_624f2.dir/build.make CMakeFiles/cmTC_624f2.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_97fab/fast"
+/usr/bin/make -f CMakeFiles/cmTC_97fab.dir/build.make CMakeFiles/cmTC_97fab.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_624f2.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=png_create_read_struct   -o CMakeFiles/cmTC_624f2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_624f2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_624f2.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=png_create_read_struct    -rdynamic CMakeFiles/cmTC_624f2.dir/CheckFunctionExists.c.o  -o cmTC_624f2 /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/x86_64-linux-gnu/libz.so 
+Building C object CMakeFiles/cmTC_97fab.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=png_create_read_struct   -o CMakeFiles/cmTC_97fab.dir/CheckFunctionExists.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_97fab
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97fab.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=png_create_read_struct    -rdynamic CMakeFiles/cmTC_97fab.dir/CheckFunctionExists.c.o  -o cmTC_97fab /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/x86_64-linux-gnu/libz.so 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the function jpeg_read_header exists passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b4f8e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b4f8e.dir/build.make CMakeFiles/cmTC_b4f8e.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_56efc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_56efc.dir/build.make CMakeFiles/cmTC_56efc.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b4f8e.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=jpeg_read_header   -o CMakeFiles/cmTC_b4f8e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_b4f8e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4f8e.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=jpeg_read_header    -rdynamic CMakeFiles/cmTC_b4f8e.dir/CheckFunctionExists.c.o  -o cmTC_b4f8e /usr/lib/x86_64-linux-gnu/libjpeg.so 
+Building C object CMakeFiles/cmTC_56efc.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=jpeg_read_header   -o CMakeFiles/cmTC_56efc.dir/CheckFunctionExists.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_56efc
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56efc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=jpeg_read_header    -rdynamic CMakeFiles/cmTC_56efc.dir/CheckFunctionExists.c.o  -o cmTC_56efc /usr/lib/x86_64-linux-gnu/libjpeg.so 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file sys/types.h exists passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e8298/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e8298.dir/build.make CMakeFiles/cmTC_e8298.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9f080/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9f080.dir/build.make CMakeFiles/cmTC_9f080.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e8298.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_e8298.dir/CheckIncludeFile.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_e8298
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8298.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e8298.dir/CheckIncludeFile.c.o  -o cmTC_e8298 
+Building C object CMakeFiles/cmTC_9f080.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_9f080.dir/CheckIncludeFile.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9f080
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f080.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_9f080.dir/CheckIncludeFile.c.o  -o cmTC_9f080 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file stdint.h exists passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b5046/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b5046.dir/build.make CMakeFiles/cmTC_b5046.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d9f32/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d9f32.dir/build.make CMakeFiles/cmTC_d9f32.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b5046.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_b5046.dir/CheckIncludeFile.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_b5046
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5046.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b5046.dir/CheckIncludeFile.c.o  -o cmTC_b5046 
+Building C object CMakeFiles/cmTC_d9f32.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d9f32.dir/CheckIncludeFile.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d9f32
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9f32.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d9f32.dir/CheckIncludeFile.c.o  -o cmTC_d9f32 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file stddef.h exists passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_beae9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_beae9.dir/build.make CMakeFiles/cmTC_beae9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9bdf5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9bdf5.dir/build.make CMakeFiles/cmTC_9bdf5.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_beae9.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_beae9.dir/CheckIncludeFile.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_beae9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_beae9.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_beae9.dir/CheckIncludeFile.c.o  -o cmTC_beae9 
+Building C object CMakeFiles/cmTC_9bdf5.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_9bdf5.dir/CheckIncludeFile.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9bdf5
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bdf5.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_9bdf5.dir/CheckIncludeFile.c.o  -o cmTC_9bdf5 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining size of void* passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a44dc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a44dc.dir/build.make CMakeFiles/cmTC_a44dc.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_59b46/fast"
+/usr/bin/make -f CMakeFiles/cmTC_59b46.dir/build.make CMakeFiles/cmTC_59b46.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a44dc.dir/SIZE_OF_VOID_PTR.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_a44dc.dir/SIZE_OF_VOID_PTR.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CheckTypeSize/SIZE_OF_VOID_PTR.c
-Linking C executable cmTC_a44dc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a44dc.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a44dc.dir/SIZE_OF_VOID_PTR.c.o  -o cmTC_a44dc /usr/lib/x86_64-linux-gnu/libjpeg.so 
+Building C object CMakeFiles/cmTC_59b46.dir/SIZE_OF_VOID_PTR.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_59b46.dir/SIZE_OF_VOID_PTR.c.o   -c /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CheckTypeSize/SIZE_OF_VOID_PTR.c
+Linking C executable cmTC_59b46
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59b46.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_59b46.dir/SIZE_OF_VOID_PTR.c.o  -o cmTC_59b46 /usr/lib/x86_64-linux-gnu/libjpeg.so 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the function cblas_ddot exists passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_98bc9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_98bc9.dir/build.make CMakeFiles/cmTC_98bc9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2361a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2361a.dir/build.make CMakeFiles/cmTC_2361a.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_98bc9.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cblas_ddot   -o CMakeFiles/cmTC_98bc9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_98bc9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98bc9.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cblas_ddot    -rdynamic CMakeFiles/cmTC_98bc9.dir/CheckFunctionExists.c.o  -o cmTC_98bc9 /usr/lib/x86_64-linux-gnu/libblas.so 
+Building C object CMakeFiles/cmTC_2361a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cblas_ddot   -o CMakeFiles/cmTC_2361a.dir/CheckFunctionExists.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2361a
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2361a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cblas_ddot    -rdynamic CMakeFiles/cmTC_2361a.dir/CheckFunctionExists.c.o  -o cmTC_2361a /usr/lib/x86_64-linux-gnu/libblas.so 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 
 Determining if the function sgesv_ exists passed with the following output:
 Change Dir: /home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6f12d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6f12d.dir/build.make CMakeFiles/cmTC_6f12d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4a623/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4a623.dir/build.make CMakeFiles/cmTC_4a623.dir/build
 make[1]: Entering directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6f12d.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgesv_   -o CMakeFiles/cmTC_6f12d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_6f12d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f12d.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgesv_    -rdynamic CMakeFiles/cmTC_6f12d.dir/CheckFunctionExists.c.o  -o cmTC_6f12d /usr/lib/x86_64-linux-gnu/liblapack.so 
+Building C object CMakeFiles/cmTC_4a623.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgesv_   -o CMakeFiles/cmTC_4a623.dir/CheckFunctionExists.c.o   -c /usr/share/clion-2017.3.1/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4a623
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a623.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgesv_    -rdynamic CMakeFiles/cmTC_4a623.dir/CheckFunctionExists.c.o  -o cmTC_4a623 /usr/lib/x86_64-linux-gnu/liblapack.so 
 make[1]: Leaving directory '/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/CMakeTmp'
 
 

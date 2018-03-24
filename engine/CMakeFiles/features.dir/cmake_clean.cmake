@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/features/eye-color/eye-color.cpp.o"
-  "CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/features/test_feature/test_feature.cpp.o"
+  "CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/AddBeard/AddBeard.cpp.o"
+  "CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/BaseFeature.cpp.o"
+  "CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.cpp.o"
   "libfeatures.pdb"
   "libfeatures.a"
 )

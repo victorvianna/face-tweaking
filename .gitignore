@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 src/external
 src/scrap
 **/cmake-build-debug
@@ -39,4 +38,5 @@ scrap
 *.exe
 *.out
 *.app
+
 
