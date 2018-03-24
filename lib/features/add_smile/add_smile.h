@@ -30,24 +30,13 @@ typedef vector<int> Triangle;
 class AddSmile : public BaseFeature {
 public:
     AddSmile(int argc, char** argv);
-    ~AddSmile();
     void calculateAndDisplay ();
 protected:
-    Mat imgSrc; // image whose eyes we will extract
+    Mat imgSrc; // image whose mouth we will extract
     string fileSrc;
-    const double alpha = 0.7;
 
     // calculate facial landmarks
     void calculateLandmarks(string filename, vector<Point2f> & output);
-
-    // Apply affine transform calculated using srcTri and dstTri to src
-    void applyAffineTransform(Mat &warpImage, Mat &src, vector<Point2f> &srcTri, vector<Point2f> &dstTri);
-
-    // Warps and alpha blends triangular regions from img and srcImg to img
-    void morphTriangle(Mat &img1, Mat &img2, Mat &img, vector<Point2f> &t1, vector<Point2f> &t2, vector<Point2f> &t, double alpha);
-
-    // triangularization
-    void calculateTriangles(vector<Triangle> & triangles);   
 };
 
 #endif
