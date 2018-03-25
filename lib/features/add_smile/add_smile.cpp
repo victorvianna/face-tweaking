@@ -58,8 +58,8 @@ AddSmile::AddSmile (int argc, char** argv) : BaseFeature(argc, argv)
 
 void AddSmile::calculateAndDisplay ()
 {        
-    imgIn.convertTo(imgIn, CV_32F); // contains face image
-    imgSrc.convertTo(imgSrc, CV_32F); // contains smile image
+    //imgIn.convertTo(imgIn, CV_32F); // contains face image
+    //imgSrc.convertTo(imgSrc, CV_32F); // contains smile image
 
     //Calculate facial landmarks
     vector<Point2f> pointsIn;

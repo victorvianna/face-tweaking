@@ -7,7 +7,6 @@ int main(int argc, char **argv) {
 /*    cout<<argc<<endl;
     for(int i=0; i<argc; i++)
         cout<<argv[i]<<endl;*/
-
     if(argc<4)
         throw("Number of arguments is not enough.");
     if(string(argv[1])==string("EyeColor"))
