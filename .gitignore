@@ -3,6 +3,9 @@ src/scrap
 **/cmake-build-debug
 **/.idea
 scrap
+GUI/build/
+GUI/dist/*.jar
+**/CMakeFiles
 
 ### C++ default ignores
 

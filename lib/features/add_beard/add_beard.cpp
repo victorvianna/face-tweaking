@@ -1,4 +1,4 @@
-#include "AddBeard.h"
+#include "add_beard.h"
 #include <iostream>
 #include <dlib/opencv.h>
 #include <opencv2/highgui/highgui.hpp>
@@ -10,8 +10,7 @@
 #include <opencv/cv.hpp>
 #include <dlib/image_io.h>
 
-//#define DATA_FILENAME "../../lib/shape_predictor_68_face_landmarks.dat" /// !! need to correct this later
-#define DATA_FILENAME "/home/victorvianna/Desktop/FaceTweaking/lib/shape_predictor_68_face_landmarks.dat" /// !! need to correct this later
+#define DATA_FILENAME "../lib/shape_predictor_68_face_landmarks.dat"
 #define MORPHED_NAME "../fullmorphed.jpg"
 #define MASK_NAME "../mask.jpg"
 

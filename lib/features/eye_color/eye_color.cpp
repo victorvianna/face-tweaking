@@ -1,4 +1,4 @@
-#include "EyeColor.h"
+#include "eye_color.h"
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <iostream>
@@ -16,14 +16,12 @@ using namespace std;
 
 typedef vector<int> Triangle;
 
-#define LEFT_EYE_BEGIN 36 // index of leftmost eye on the image
+#define LEFT_EYE_BEGIN 36 // indices of points of the leftmost eye on the image
 #define LEFT_EYE_END 41
-#define RIGHT_EYE_BEGIN 42 // index of rightmost eye on the image
+#define RIGHT_EYE_BEGIN 42 // indices of points of the rightmost eye on the image
 #define RIGHT_EYE_END 47
-//#define DATA_FILENAME "../../lib/shape_predictor_68_face_landmarks.dat"
-#define DATA_FILENAME "/home/victorvianna/Desktop/FaceTweaking/lib/shape_predictor_68_face_landmarks.dat" /// !! need to correct this later
-//#define TRIANGLE_FILENAME "../../lib/features/EyeColor/tri.txt" /// !! need to correct this later
-#define TRIANGLE_FILENAME "/home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/tri.txt"
+#define DATA_FILENAME "../lib/shape_predictor_68_face_landmarks.dat"
+#define TRIANGLE_FILENAME "../lib/features/eye_color/tri.txt"
 
 EyeColor::EyeColor (int argc, char** argv) : BaseFeature(argc, argv)
 {
@@ -46,12 +44,11 @@ void EyeColor::calculateAndDisplay ()
     //empty average image
     imgOut = imgIn.clone();
 
-
     //Calculate facial landmarks
     vector<Point2f> pointsIn, pointsSrc, pointsOut;
     calculateLandmarks(fileIn, pointsIn);
     calculateLandmarks(fileSrc, pointsSrc);  
-        pointsOut = pointsIn;  /// ALTERATION: we map the regions of image2 to the exact regions of image1
+    pointsOut = pointsIn;  /// ALTERATION: we map the regions of imageSrc to the exact corresponding regions of imageIn
     
     vector<Triangle> triangles;
 
@@ -66,12 +63,12 @@ void EyeColor::calculateAndDisplay ()
         // Triangles
         vector<Point2f> tIn, tSrc, tOut;
         
-        // Triangle corners for image 1.
+        // Triangle corners for image In.
         tIn.push_back( pointsIn[x] );
         tIn.push_back( pointsIn[y] );
         tIn.push_back( pointsIn[z] );
         
-        // Triangle corners for image 2.
+        // Triangle corners for image Src.
         tSrc.push_back( pointsSrc[x] );
         tSrc.push_back( pointsSrc[y] );
         tSrc.push_back( pointsSrc[z] );
@@ -156,7 +153,7 @@ void EyeColor::calculateLandmarks(string filename, vector<Point2f> & output)
 }
 
 
-// triangularization
+// triangulation
 void EyeColor::calculateTriangles(vector<Triangle> & triangles)
 {
     ifstream ifs(TRIANGLE_FILENAME);
@@ -171,13 +168,10 @@ void EyeColor::calculateTriangles(vector<Triangle> & triangles)
     if(triangles.size()!=0) // if points were already calculated, just load them
     return;
 
-
     // otherwise
-
-
     /*
     if we want to increase the number of points or add the center of the pupil 
-    (seems a godd idea), we need to implement the triangularization
+    (seems a godd idea), we need to implement the delaunay triangulation
     */
 
     throw("Triangle file not found");
@@ -186,8 +180,7 @@ void EyeColor::calculateTriangles(vector<Triangle> & triangles)
 
 // Warps and alpha blends triangular regions from img1 and img2 to img
 void EyeColor::morphTriangle(Mat &img1, Mat &img2, Mat &img, vector<Point2f> &t1, vector<Point2f> &t2, vector<Point2f> &t, double alpha)
-{
-    
+{   
     // Find bounding rectangle for each triangle
     Rect r = boundingRect(t);
     Rect r1 = boundingRect(t1);
@@ -227,15 +220,11 @@ void EyeColor::morphTriangle(Mat &img1, Mat &img2, Mat &img, vector<Point2f> &t1
     multiply(imgRect,mask, imgRect);
     multiply(img(r), Scalar(1.0,1.0,1.0) - mask, img(r));
     img(r) = img(r) + imgRect;
-    
-    
 }
-
 
 // Apply affine transform calculated using srcTri and dstTri to src
 void EyeColor::applyAffineTransform(Mat &warpImage, Mat &src, vector<Point2f> &srcTri, vector<Point2f> &dstTri)
-{
-    
+{   
     // Given a pair of triangles, find the affine transform.
     Mat warpMat = getAffineTransform( srcTri, dstTri );
     

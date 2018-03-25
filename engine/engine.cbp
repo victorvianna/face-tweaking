@@ -27,6 +27,56 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="features">
+				<Option output="/home/victorvianna/Desktop/FaceTweaking/engine/libfeatures.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/victorvianna/Desktop/FaceTweaking/engine"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/victorvianna/Desktop/FaceTweaking/lib/dlib-19.9/dlib/.."/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 features"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="features/fast">
+				<Option output="/home/victorvianna/Desktop/FaceTweaking/engine/libfeatures.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/victorvianna/Desktop/FaceTweaking/engine"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/victorvianna/Desktop/FaceTweaking/lib/dlib-19.9/dlib/.."/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 features/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/home/victorvianna/Desktop/FaceTweaking/engine"/>
 				<Option type="4"/>
@@ -82,56 +132,6 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 engine/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="features">
-				<Option output="/home/victorvianna/Desktop/FaceTweaking/engine/libfeatures.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/victorvianna/Desktop/FaceTweaking/engine"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/victorvianna/Desktop/FaceTweaking/lib/dlib-19.9/dlib/.."/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 features"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="features/fast">
-				<Option output="/home/victorvianna/Desktop/FaceTweaking/engine/libfeatures.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/victorvianna/Desktop/FaceTweaking/engine"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/victorvianna/Desktop/FaceTweaking/lib/dlib-19.9/dlib/.."/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 features/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/victorvianna/Desktop/FaceTweaking/engine/Makefile&quot;  VERBOSE=1 clean"/>
@@ -517,22 +517,16 @@
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/dlib-19.9/dlib/unicode/unicode.h">
 			<Option target="dlib"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/AddBeard/AddBeard.cpp">
-			<Option target="features"/>
-		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/AddBeard/AddBeard.h">
-			<Option target="features"/>
-		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/BaseFeature.cpp">
 			<Option target="features"/>
 		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/BaseFeature.h">
 			<Option target="features"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.cpp">
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/add_beard/add_beard.cpp">
 			<Option target="features"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.h">
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/add_beard/add_beard.h">
 			<Option target="features"/>
 		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp">
@@ -541,37 +535,28 @@
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.h">
 			<Option target="features"/>
 		</Unit>
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/eye_color/eye_color.cpp">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/eye_color/eye_color.h">
+			<Option target="features"/>
+		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\"/>
-		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/set_compiler_specific_options.cmake">
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/cmake_find_blas.txt">
 			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
 		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/release_build_by_default">
 			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/use_cpp_11.cmake">
-			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
-		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/cmake_find_blas.txt">
-			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
-		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/set_compiler_specific_options.cmake">
 			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/release_build_by_default">
-			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
-		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/use_cpp_11.cmake">
-			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
-		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/cmake_find_blas.txt">
 			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
 		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../../../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
@@ -580,10 +565,10 @@
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../../../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../../../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../../../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
 		</Unit>
 	</Project>

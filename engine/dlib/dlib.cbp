@@ -400,31 +400,16 @@
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\"/>
-		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/set_compiler_specific_options.cmake">
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/cmake_find_blas.txt">
 			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
 		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/release_build_by_default">
 			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/use_cpp_11.cmake">
-			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
-		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/cmake_find_blas.txt">
-			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
-		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/set_compiler_specific_options.cmake">
 			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/release_build_by_default">
-			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
-		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/use_cpp_11.cmake">
-			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
-		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../lib/dlib-19.9/dlib/cmake_utils/cmake_find_blas.txt">
 			<Option virtualFolder="CMake Files\..\lib\dlib-19.9\dlib\cmake_utils\"/>
 		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../../../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
@@ -433,10 +418,10 @@
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../../../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../../../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../../../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
 		</Unit>
 	</Project>

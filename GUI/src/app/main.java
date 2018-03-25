@@ -1,11 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package app;
 
 import java.io.File;
+//import java.nio.file.Path;
+import java.nio.file.Files;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -35,14 +32,15 @@ import javafx.stage.Stage;
  *
  * @author barcik
  */
+
 public class main extends Application {
    
     Stage window;
     Scene homeScene;
     
     private final String FEATURES_DIR = "../lib/features";
-    private final String ENGINE_DIR = "../engine/cmake-build-debug/engine";
-    private final String IMAGE_DIR = "../image.jpg";
+    private final String ENGINE_DIR = "../engine/engine";
+    private final String IMAGE_PATH = "../image.jpg";
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -56,17 +54,10 @@ public class main extends Application {
         VBox homeLayout = new VBox(20);
         homeLayout.setPadding(new Insets(0, 25, 25, 25));
 
-//       GridPane grid = new GridPane();
-//       grid.setAlignment(Pos.CENTER);
-//       grid.setHgap(10);
-//       grid.setVgap(10);
-//       grid.setPadding(new Insets(25, 25, 25, 25));
         Text scenetitle = new Text("Select the tweaking");
         scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
         homeLayout.getChildren().add(scenetitle);
 
-//       grid.add(scenetitle, 0, 0, 2, 1);
-        // Buttons for the features
         List<Button> features = new LinkedList<>();
         ArrayList<File> files= new ArrayList<>();
         ArrayList<File> featureFiles =new ArrayList<>();
@@ -87,8 +78,7 @@ public class main extends Application {
         }
         
         scenes = new Scene[features.size()];
-
-        
+       
         ArrayList<ArrayList<File> > featOptions = new ArrayList<>();
         
         // Handling buttons
@@ -104,8 +94,7 @@ public class main extends Application {
             box.setAlignment(Pos.CENTER);
             Button returnBtn = new Button("Return");
             returnBtn.setOnAction(e -> window.setScene(homeScene));
-            Button runBtn = new Button("Run");
-                       
+            Button runBtn = new Button("Run");                      
             
             Text text = new Text(b.getText());
             box.getChildren().add(text);
@@ -136,31 +125,15 @@ public class main extends Application {
                     Object oldValue, Object newValue) -> {
                 label.setText((String)newValue);                
             });
-            /*         WE HAVE TO CORRECT THIS LATER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DON'T ERASE
-            choiceBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>(){
-                @Override
-                public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                    index[0] = newValue.intValue();
-                    choiceBox.getSelectionModel().select(index[0]);
-                    
-                }
-            });            
-            choiceBox.getSelectionModel().selectFirst();
-            */
-                  
-                        
+                                   
             
             runBtn.setOnAction(new EventHandler<ActionEvent>() {
                 @Override public void handle(ActionEvent e) {
                     try
                     {
-                        System.out.println(ENGINE_DIR+" "+shortName(feature)+" "+IMAGE_DIR+" "+mediaDir+"/"+label.getText()+".jpg");
-                        final ProcessBuilder  pb = new ProcessBuilder(ENGINE_DIR, shortName(feature),IMAGE_DIR, mediaDir+"/"+label.getText()+".jpg");
-                        //final ProcessBuilder  pb = new ProcessBuilder("bash touch OI.txt");
+                        final ProcessBuilder  pb = new ProcessBuilder(ENGINE_DIR, shortName(feature),IMAGE_PATH, mediaDir+"/"+label.getText()+".jpg");
                         Process p = pb.start();     // Start the process.
-                        System.out.println("Process started!");
-                        p.waitFor();                // Wait for the process to finish.
-                        System.out.println("Process finished!");
+                        p.waitFor();                // Wait for the process to finish
                     }
                     catch(IOException | InterruptedException exc)
                     {
@@ -173,39 +146,35 @@ public class main extends Application {
             box.getChildren().add(choiceBox);            
             box.getChildren().add(runBtn);
             box.getChildren().add(returnBtn);
-            
-            
-            
+                       
             Scene s = new Scene(box, 300, 250);
             scenes[counter] = s;
             b.setOnAction(e -> window.setScene(s));
             counter++;
             
-            
-            
-            
-            
-            
         }
-        
-        
         
         homeLayout.getChildren().addAll(features);
         homeLayout.setAlignment(Pos.CENTER);
 
-
-
         Button exit = new Button("Exit");
-        exit.setOnAction(e -> System.exit(0));
+        exit.addEventHandler(ActionEvent.ACTION, (e)-> {
+            try{
+                Files.deleteIfExists(new File(IMAGE_PATH+".txt").toPath());
+            }
+            catch(Exception excep)
+            {
+                System.out.println("Error when deleting landmarks file");
+            }
+            System.exit(0);            
+        });
         HBox hbExit = new HBox(10);
         hbExit.setAlignment(Pos.BOTTOM_RIGHT);
         hbExit.getChildren().add(exit);
-//       grid.add(hbExit, 1, 4);
 
         homeLayout.getChildren().add(hbExit);
 
         homeScene = new Scene(homeLayout, 300, 250);
-//       Scene scene = new Scene(grid, 300, 275);
         window.setScene(homeScene);
         window.show();
         
@@ -220,9 +189,6 @@ public class main extends Application {
         return f.getName().substring(f.getName().lastIndexOf('.')+1, f.getName().length());
     }
     
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }

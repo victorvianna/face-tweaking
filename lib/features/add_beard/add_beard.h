@@ -13,9 +13,7 @@
 #include <opencv/cv.hpp>
 #include <dlib/image_io.h>
 
-//#define DATA_FILENAME "../../lib/shape_predictor_68_face_landmarks.dat" /// !! need to correct this later
-#define DATA_FILENAME "/home/victorvianna/Desktop/FaceTweaking/lib/shape_predictor_68_face_landmarks.dat" /// !! need to correct this later
-
+#define DATA_FILENAME "../lib/shape_predictor_68_face_landmarks.dat" 
 
 class AddBeard : public BaseFeature {
 public:

@@ -4,16 +4,14 @@ using namespace std;
 
 int main(int argc, char **argv) {
     BaseFeature* f;
-/*    cout<<argc<<endl;
-    for(int i=0; i<argc; i++)
-        cout<<argv[i]<<endl;*/
+
     if(argc<4)
         throw("Number of arguments is not enough.");
-    if(string(argv[1])==string("EyeColor"))
+    if(string(argv[1])==string("eye_color"))
     {
         f = new EyeColor(argc, argv);
     }
-    else if(string(argv[1])==string("AddBeard"))
+    else if(string(argv[1])==string("add_beard"))
     {
         f = new AddBeard(argc, argv);
     }
