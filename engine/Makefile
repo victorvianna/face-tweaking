@@ -230,6 +230,33 @@ home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.cpp.s:
 	$(MAKE) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.cpp.s
 .PHONY : home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.cpp.s
 
+home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.o: home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.o
+
+.PHONY : home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.o
+
+# target to build an object file
+home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.o:
+	$(MAKE) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.o
+.PHONY : home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.o
+
+home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.i: home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.i
+
+.PHONY : home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.i
+
+# target to preprocess a source file
+home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.i:
+	$(MAKE) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.i
+.PHONY : home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.i
+
+home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.s: home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.s
+
+.PHONY : home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.s
+
+# target to generate assembly for a file
+home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.s:
+	$(MAKE) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.s
+.PHONY : home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -277,6 +304,9 @@ help:
 	@echo "... home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.o"
 	@echo "... home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.i"
 	@echo "... home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.s"
+	@echo "... home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.o"
+	@echo "... home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.i"
+	@echo "... home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -520,6 +520,9 @@
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/AddBeard/AddBeard.cpp">
 			<Option target="features"/>
 		</Unit>
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/AddBeard/AddBeard.h">
+			<Option target="features"/>
+		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/BaseFeature.cpp">
 			<Option target="features"/>
 		</Unit>
@@ -530,6 +533,12 @@
 			<Option target="features"/>
 		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.h">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.h">
 			<Option target="features"/>
 		</Unit>
 		<Unit filename="/home/victorvianna/Desktop/FaceTweaking/engine/CMakeLists.txt">

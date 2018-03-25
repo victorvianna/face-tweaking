@@ -8,7 +8,7 @@ int main(int argc, char **argv) {
     for(int i=0; i<argc; i++)
         cout<<argv[i]<<endl;*/
 
-    if(argc!=4)
+    if(argc<4)
         throw("Number of arguments is not enough.");
     if(string(argv[1])==string("EyeColor"))
     {
@@ -17,6 +17,9 @@ int main(int argc, char **argv) {
     else if(string(argv[1])==string("AddBeard"))
     {
         f = new AddBeard(argc, argv);
+    }
+    else if(string(argv[1])==string("add_smile")) {
+        f = new AddSmile(argc, argv);
     }
     else
     {

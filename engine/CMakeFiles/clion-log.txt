@@ -1,0 +1,18 @@
+/usr/share/clion-2017.3.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/victorvianna/Desktop/FaceTweaking/engine
+-- Searching for BLAS and LAPACK
+-- Searching for BLAS and LAPACK
+-- Checking for module 'cblas'
+--   No package 'cblas' found
+-- Checking for module 'lapack'
+--   Found lapack, version 3.7.1
+-- Found LAPACK library
+-- Found BLAS library
+-- C++11 activated.
+CMake Warning at CMakeLists.txt:11 (message):
+  
+  /home/victorvianna/Desktop/FaceTweaking/engine/../lib/features/AddBeard/AddBeard.cpp/home/victorvianna/Desktop/FaceTweaking/engine/../lib/features/BaseFeature.cpp/home/victorvianna/Desktop/FaceTweaking/engine/../lib/features/EyeColor/EyeColor.cpp/home/victorvianna/Desktop/FaceTweaking/engine/../lib/features/add_smile/add_smile.cpp
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/victorvianna/Desktop/FaceTweaking/engine

@@ -346,7 +346,7 @@ DLIB_PNG_SUPPORT:BOOL=ON
 //Disable this if you don't want to use a BLAS library
 DLIB_USE_BLAS:BOOL=ON
 
-//Disable this if you don't want to use a BLAS library
+//Disable this if you don't want to use NVIDIA CUDA
 DLIB_USE_CUDA:STRING=OFF
 
 //Disable this if you don't want to use a LAPACK library

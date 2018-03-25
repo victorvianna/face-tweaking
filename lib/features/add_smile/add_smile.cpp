@@ -1,6 +1,7 @@
-#include "AddSmile.h"
-#include <opencv2/imgproc/imgproc.hpp>
+#include "add_smile.h"
+#include <opencv2/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
+#include <opencv/cv.hpp>
 #include <iostream>
 #include <fstream>
 #include <iomanip>

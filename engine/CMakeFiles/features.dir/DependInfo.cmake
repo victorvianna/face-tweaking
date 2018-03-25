@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/victorvianna/Desktop/FaceTweaking/lib/features/AddBeard/AddBeard.cpp" "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/AddBeard/AddBeard.cpp.o"
   "/home/victorvianna/Desktop/FaceTweaking/lib/features/BaseFeature.cpp" "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/BaseFeature.cpp.o"
   "/home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.cpp" "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/EyeColor/EyeColor.cpp.o"
+  "/home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp" "/home/victorvianna/Desktop/FaceTweaking/engine/CMakeFiles/features.dir/home/victorvianna/Desktop/FaceTweaking/lib/features/add_smile/add_smile.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
