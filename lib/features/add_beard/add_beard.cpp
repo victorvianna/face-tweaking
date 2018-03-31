@@ -10,16 +10,18 @@
 #include <opencv/cv.hpp>
 #include <dlib/image_io.h>
 
+
 #define DATA_FILENAME "../lib/shape_predictor_68_face_landmarks.dat"
-#define MORPHED_NAME "../fullmorphed.jpg"
-#define MASK_NAME "../mask.jpg"
+#define TRIANGLE_FILENAME "../lib/features/add_beard/tri.txt"
+#define MORPHED_NAME "../lib/features/add_beard/fullmorphed.jpg"
+#define MASK_NAME "../lib/features/add_beard/mask.jpg"
 
 AddBeard::AddBeard(int argc, char** argv) : BaseFeature(argc, argv) {
     // Loading images
     if(argc<4)
         throw "Number of arguments not enough";
     image_name = string(argv[2]); beard_name = string(argv[3]); beard_resized_name = string(argv[3]);
-    beard_image = cv::imread(string(argv[3]));
+    beard_image = cv::imread(beard_name);
 }
 
 // Create cv::Point from a landmark vector in the position index
@@ -50,7 +52,7 @@ void AddBeard::manualTriangulation(cv::Mat &image, std::string filename, std::ve
 
     int k = 0; // we only have one image
 
-    std::string points_file = "../points.txt";
+    std::string points_file = TRIANGLE_FILENAME;
     std::ifstream ifs (points_file.c_str());
     int a, b, c;
 
@@ -145,6 +147,7 @@ void AddBeard::calculateAndDisplay() {
 
     if(image.size().width != original_beard_image.size().width ||
             image.size().height != original_beard_image.size().height){
+        std::cout << "doing resize" << std::endl;
         //Resizing
         cv::resize(original_beard_image, beard_image, image.size(), 0, 0, cv::INTER_LINEAR);
         
@@ -209,14 +212,13 @@ void AddBeard::calculateAndDisplay() {
 
     // Seamlessly clone src into dst and put the results in output
     cv::Mat normal_clone;
-    cv::Mat mixed_clone;
 
     cv::seamlessClone(warped_image, original_image, mask_image, center, normal_clone, cv::NORMAL_CLONE);
-    cv::seamlessClone(warped_image, original_image, mask_image, center, mixed_clone, cv::MIXED_CLONE);
+
+    // imgOut = normal_clone;
 
     //cv::imwrite("../TESTmorphed_normalclone.jpg", normal_clone);
-    //cv::imwrite("../TESTmorphed_mixedclone.jpg", mixed_clone);
-    cv::imshow("Result", mixed_clone);
-    imgOut =mixed_clone;
+    cv::imshow("Result", normal_clone);
 
+    cv::waitKey(0);
 }
