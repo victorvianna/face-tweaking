@@ -25,12 +25,12 @@ To compile, open a shell and run
 ```
 $ bash COMPILE.sh
 ```
-To start the application, add the desired image file as image.jpg to the project root, open a shell and run 
+To start the application, add the desired image file as image.jpg (jpg, not jpeg) to the project root, open a shell and run 
 ```
 $ sudo bash RUN.sh
 ```
 Choose which tweak you want to apply and the option (Ex: Change eye color / Blue eyes).  
-Important: After the tweaked image is shown, press any key to continue. Do not close the image!
+Important: After the tweaked image is shown, PRESS SPACE TO CONTINUE. Do not close the image!
 
 ## Scalability: Implementing new features
 

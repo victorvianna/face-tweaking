@@ -133,17 +133,17 @@ void AddBeard::beardMask(dlib::full_object_detection &landmarks, std::vector<cv:
     mask.push_back(createPoint(landmarks, 1));
 
 }
-
 void AddBeard::calculateAndDisplay() {
     cv::Mat image = imgIn.clone();
-    if(image.size().width != beard_image.size().width ||
-            image.size().height != beard_image.size().height){
-        std::cout << "doing resize" << std::endl;
-        //Resizing
-        cv::resize(image, image, beard_image.size(), 0, 0, cv::INTER_LINEAR);      
-        
-    }
+    cv::Mat original_beard_image = beard_image.clone();
+    cv::Mat original_image = imgIn.clone();
 
+  /*  //Resizing
+    if(image.size().width != original_beard_image.size().width ||
+            image.size().height != original_beard_image.size().height){
+        cv::resize(image, image, beard_image.size(), 0, 0, cv::INTER_LINEAR);
+    }
+*/
     // Convert Mat to float data type
     image.convertTo(image, CV_32F);
     beard_image.convertTo(beard_image, CV_32F);
@@ -199,7 +199,7 @@ void AddBeard::calculateAndDisplay() {
     // Seamlessly clone src into dst and put the results in output
     cv::Mat normal_clone;
 
-    cv::seamlessClone(warped_image, image, mask_image, center, normal_clone, cv::NORMAL_CLONE);
+    cv::seamlessClone(warped_image, original_image, mask_image, center, normal_clone, cv::NORMAL_CLONE);
 
     // imgOut = normal_clone;
 
