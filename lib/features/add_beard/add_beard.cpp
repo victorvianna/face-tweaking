@@ -138,12 +138,12 @@ void AddBeard::calculateAndDisplay() {
     cv::Mat original_beard_image = beard_image.clone();
     cv::Mat original_image = imgIn.clone();
 
-  /*  //Resizing
+    //Resizing
     if(image.size().width != original_beard_image.size().width ||
             image.size().height != original_beard_image.size().height){
         cv::resize(image, image, beard_image.size(), 0, 0, cv::INTER_LINEAR);
     }
-*/
+
     // Convert Mat to float data type
     image.convertTo(image, CV_32F);
     beard_image.convertTo(beard_image, CV_32F);
