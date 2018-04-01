@@ -17,13 +17,6 @@ using namespace std;
 
 typedef vector<int> Triangle;
 
-#define LEFT_EYE_BEGIN 36 // index of leftmost eye on the image
-#define LEFT_EYE_END 41
-#define RIGHT_EYE_BEGIN 42 // index of rightmost eye on the image
-#define RIGHT_EYE_END 47
-#define DATA_FILENAME "../lib/shape_predictor_68_face_landmarks.dat" 
-#define TRIANGLE_FILENAME "../lib/features/AddSmile/tri.txt"
-
 /*
  * This function returns the mid point of a set of points
  *

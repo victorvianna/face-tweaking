@@ -21,6 +21,11 @@ public:
 protected:
     cv::Mat beard_image; // image whose beard we will extract
     string beard_resized_name, beard_name, image_name;
+    const string DATA_FILENAME = string("lib/shape_predictor_68_face_landmarks.dat");
+    const string TRIANGLE_FILENAME = string("lib/features/add_beard/tri.txt");
+    const string MORPHED_FILENAME = string("lib/features/add_beard/fullmorphed.jpg");
+    const string MASK_FILENAME = string("lib/features/add_beard/mask.jpg");
+
     const double alpha = 1;
     cv::Point createPoint(dlib::full_object_detection &coord, int index);
     void manualTriangulation(cv::Mat &image, std::string filename, std::vector<dlib::full_object_detection> &landmarks,

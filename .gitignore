@@ -3,6 +3,7 @@ src/scrap
 **/cmake-build-debug
 **/.idea
 scrap
+bin/
 GUI/build/
 GUI/dist/*.jar
 **/CMakeFiles

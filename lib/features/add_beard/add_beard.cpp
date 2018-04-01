@@ -10,12 +10,6 @@
 #include <opencv/cv.hpp>
 #include <dlib/image_io.h>
 
-
-#define DATA_FILENAME "../lib/shape_predictor_68_face_landmarks.dat"
-#define TRIANGLE_FILENAME "../lib/features/add_beard/tri.txt"
-#define MORPHED_NAME "../lib/features/add_beard/fullmorphed.jpg"
-#define MASK_NAME "../lib/features/add_beard/mask.jpg"
-
 AddBeard::AddBeard(int argc, char** argv) : BaseFeature(argc, argv) {
     // Loading images
     if(argc<4)
@@ -142,20 +136,12 @@ void AddBeard::beardMask(dlib::full_object_detection &landmarks, std::vector<cv:
 
 void AddBeard::calculateAndDisplay() {
     cv::Mat image = imgIn.clone();
-    cv::Mat original_beard_image = beard_image.clone();
-    cv::Mat original_image = imgIn.clone();
-
-    if(image.size().width != original_beard_image.size().width ||
-            image.size().height != original_beard_image.size().height){
+    if(image.size().width != beard_image.size().width ||
+            image.size().height != beard_image.size().height){
         std::cout << "doing resize" << std::endl;
         //Resizing
-        cv::resize(original_beard_image, beard_image, image.size(), 0, 0, cv::INTER_LINEAR);
+        cv::resize(image, image, beard_image.size(), 0, 0, cv::INTER_LINEAR);      
         
-        /***
-        cv::imwrite(beard_resized_name, beard_image);
-        beard_image = cv::imread(beard_resized_name);
-        return;
-        */
     }
 
     // Convert Mat to float data type
@@ -199,12 +185,12 @@ void AddBeard::calculateAndDisplay() {
     }
 
     // Saving FullMorphed and Mask
-    cv::imwrite(MORPHED_NAME, warpedImage);
-    cv::imwrite(MASK_NAME, src_mask);
-    cv::Mat mask_image = cv::imread(MASK_NAME, 0);
+    cv::imwrite(MORPHED_FILENAME, warpedImage);
+    cv::imwrite(MASK_FILENAME, src_mask);
+    cv::Mat mask_image = cv::imread(MASK_FILENAME, 0);
 
     // Loading sourceImage and warpedImage
-    cv::Mat warped_image = cv::imread(MORPHED_NAME);
+    cv::Mat warped_image = cv::imread(MORPHED_FILENAME);
 
     // Finding position to seamlessclone function
     cv::Rect r = cv::boundingRect(mask);
@@ -213,7 +199,7 @@ void AddBeard::calculateAndDisplay() {
     // Seamlessly clone src into dst and put the results in output
     cv::Mat normal_clone;
 
-    cv::seamlessClone(warped_image, original_image, mask_image, center, normal_clone, cv::NORMAL_CLONE);
+    cv::seamlessClone(warped_image, image, mask_image, center, normal_clone, cv::NORMAL_CLONE);
 
     // imgOut = normal_clone;
 

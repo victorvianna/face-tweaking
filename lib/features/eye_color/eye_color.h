@@ -19,14 +19,6 @@ using namespace std;
 
 typedef vector<int> Triangle;
 
-#define LEFT_EYE_BEGIN 36 // index of leftmost eye on the image
-#define LEFT_EYE_END 41
-#define RIGHT_EYE_BEGIN 42 // index of rightmost eye on the image
-#define RIGHT_EYE_END 47
-#define DATA_FILENAME "../shape_predictor_68_face_landmarks.dat"
-#define TRIANGLE_FILENAME "../tri.txt"
-
-
 class EyeColor : public BaseFeature {
 public:
     EyeColor(int argc, char** argv);
@@ -35,6 +27,12 @@ public:
 protected:
     Mat imgSrc; // image whose eyes we will extract
     string fileSrc;
+    const int LEFT_EYE_BEGIN = 36; // indices of points of the leftmost eye on the image
+    const int LEFT_EYE_END = 41;
+    const int RIGHT_EYE_BEGIN = 42; // indices of points of the rightmost eye on the image
+    const int  RIGHT_EYE_END = 47;
+    const string DATA_FILENAME = string("lib/shape_predictor_68_face_landmarks.dat");
+    const string TRIANGLE_FILENAME = string("lib/features/eye_color/tri.txt");
     const double alpha = 0.7;
 
     // calculate facial landmarks

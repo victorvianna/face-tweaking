@@ -16,18 +16,11 @@ using namespace std;
 
 typedef vector<int> Triangle;
 
-#define LEFT_EYE_BEGIN 36 // indices of points of the leftmost eye on the image
-#define LEFT_EYE_END 41
-#define RIGHT_EYE_BEGIN 42 // indices of points of the rightmost eye on the image
-#define RIGHT_EYE_END 47
-#define DATA_FILENAME "../lib/shape_predictor_68_face_landmarks.dat"
-#define TRIANGLE_FILENAME "../lib/features/eye_color/tri.txt"
-
 EyeColor::EyeColor (int argc, char** argv) : BaseFeature(argc, argv)
 {
     if(argc<4)
         throw("Number of arguments is not enough");
-    fileSrc = string(argv[3]);
+    fileSrc = string(argv[3]); 
     imgSrc = imread(fileSrc);
 }
 
@@ -38,7 +31,7 @@ EyeColor::~EyeColor()
 
 void EyeColor::calculateAndDisplay ()
 {        
-    imgIn.convertTo(imgIn, CV_32F);
+    imgIn.convertTo(imgIn, CV_32F); 
     imgSrc.convertTo(imgSrc, CV_32F);
 
     //empty average image
@@ -53,9 +46,11 @@ void EyeColor::calculateAndDisplay ()
     vector<Triangle> triangles;
 
     //calculate triangle indices
+
     calculateTriangles(triangles);
 
     // apply morphing algorithm
+
     for(Triangle & tri : triangles)
     {
         int x = tri[0], y = tri[1], z=tri[2];
@@ -166,7 +161,7 @@ void EyeColor::calculateTriangles(vector<Triangle> & triangles)
     }
 
     if(triangles.size()!=0) // if points were already calculated, just load them
-    return;
+        return;
 
     // otherwise
     /*

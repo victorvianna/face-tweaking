@@ -19,14 +19,6 @@ using namespace std;
 
 typedef vector<int> Triangle;
 
-#define LEFT_EYE_BEGIN 36 // index of leftmost eye on the image
-#define LEFT_EYE_END 41
-#define RIGHT_EYE_BEGIN 42 // index of rightmost eye on the image
-#define RIGHT_EYE_END 47
-#define DATA_FILENAME "../shape_predictor_68_face_landmarks.dat"
-#define TRIANGLE_FILENAME "../tri.txt"
-
-
 class AddSmile : public BaseFeature {
 public:
     AddSmile(int argc, char** argv);
@@ -34,6 +26,8 @@ public:
 protected:
     Mat imgSrc; // image whose mouth we will extract
     string fileSrc;
+    const string DATA_FILENAME = string("lib/shape_predictor_68_face_landmarks.dat");
+    const string TRIANGLE_FILENAME = string("lib/features/AddSmile/tri.txt");
 
     // calculate facial landmarks
     void calculateLandmarks(string filename, vector<Point2f> & output);

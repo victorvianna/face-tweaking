@@ -16,15 +16,21 @@ Victor Hugo Vianna
 
 ## Requirements
 
-Java 1.8
+Java 1.8  
 OpenCV 3.2
 
 ## Instructions
 
-Add the desired image file as image.jpg to the project root, open a shell and run
+To compile, open a shell and run 
 ```
-$ bash RUN.sh
+$ bash COMPILE.sh
 ```
+To start the application, add the desired image file as image.jpg to the project root, open a shell and run 
+```
+$ sudo bash RUN.sh
+```
+Choose which tweak you want to apply and the option (Ex: Change eye color / Blue eyes).  
+Important: After the tweaked image is shown, press any key to continue. Do not close the image!
 
 ## Scalability: Implementing new features
 
