@@ -1,6 +1,7 @@
 src/external
 src/scrap
 **/cmake-build-debug
+**/.idea
 
 # Prerequisites
 *.d
