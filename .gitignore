@@ -7,6 +7,9 @@ bin/
 GUI/build/
 GUI/dist/*.jar
 **/CMakeFiles
+lib/all_headers.h
+lib/features/add_beard/fullmorphed.jpg
+lib/features/add_beard/mask.jpg
 
 ### C++ default ignores
 

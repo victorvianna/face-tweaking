@@ -17,17 +17,18 @@ Victor Hugo Vianna
 ## Requirements
 
 Java 1.8  
-OpenCV 3.2
+OpenCV 3.2  
+JavaFX  
 
 ## Instructions
 
-To compile, open a shell and run 
+Setup the JAVA_HOME environment variable. To compile, open a shell and run
 ```
-$ bash COMPILE.sh
+$ ./COMPILE.sh
 ```
 To start the application, add the desired image file as image.jpg (jpg, not jpeg) to the project root, open a shell and run 
 ```
-$ sudo bash RUN.sh
+$ ./RUN.sh
 ```
 Choose which tweak you want to apply and the option (Ex: Change eye color / Blue eyes).  
 Important: After the tweaked image is shown, PRESS SPACE TO CONTINUE. Do not close the image!

@@ -14,4 +14,4 @@ make
 cd ../..
 mkdir bin/GUI
 cd bin/GUI
-javac -d . ../../src/GUI/main.java
+javac -d . -cp $JAVA_HOME/lib/javafx-mx.jar ../../src/GUI/main.java
